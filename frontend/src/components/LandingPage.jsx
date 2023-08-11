@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavigationBar from "./NavigationBar";
 import Introduction from "./Introduction";
+import Footer from "./Footer";
 
 import headerSlogan from "../assets/imgs/landing-slogan.svg";
 import headerImg from "../assets/imgs/landing-header-img.svg";
@@ -10,15 +11,22 @@ import headerIcon3 from "../assets/icons/header-icon-solid-3.svg";
 import headerIcon4 from "../assets/icons/header-icon-solid-4.svg";
 import angleRight from "../assets/icons/angle-right-solid.svg";
 import bookingContent from "../assets/imgs/landing-maa-content.svg";
-import lazyFooter from "../assets/imgs/footer.svg";
+import bookingBackground from "../assets/imgs/landing-booking-form.svg";
 import emergencyCall from "../assets/icons/emergency-call.svg";
 
 const LandingPage = () => {
   const [currentType, setCurrentType] = useState("intro"); //intro, gallery, news
 
-  const handleBooking = () => {
+  const [bookingTicket, setBookingTicket] = useState({
+    info: "",
+    phone: "",
+    datetime: "",
+    service: "",
+    dentist: "",
+    notes: "",
+  });
 
-  };
+  const handleBooking = () => {};
 
   return (
     <div className="LandingPage">
@@ -36,7 +44,9 @@ const LandingPage = () => {
                 Hãy để các nha sĩ cùng những dịch vụ tốt nhất chăm sóc cho sức
                 khoẻ răng miệng của bạn
               </p>
-              <a href="#Booking" className="header__button">Đặt lịch ngay</a>
+              <a href="#Booking" className="header__button">
+                Đặt lịch ngay
+              </a>
             </div>
             <img className="header__img" src={headerImg} alt="" />
           </div>
@@ -151,19 +161,119 @@ const LandingPage = () => {
       {/* Make an Appointment */}
       <div className="Booking" id="Booking">
         <div className="section booking__main">
-            <div className="grid wide booking__wrap">
-                <img src={bookingContent} alt="" className="booking__content"/>
-                <form className="make-an-appointment" onSubmit={handleBooking}>
-
-                </form>
-            </div>
+          <div className="grid wide booking__wrap">
+            <img src={bookingContent} alt="" className="booking__content" />
+            <form className="booking__form" onSubmit={handleBooking}>
+              <img
+                src={bookingBackground}
+                alt=""
+                className="booking__background"
+              />
+              <div className="booking__input">
+                <label htmlFor="info">Họ và tên</label>
+                <input
+                  value={bookingTicket.info}
+                  onChange={(e) =>
+                    setBookingTicket({ ...bookingTicket, info: e.target.value })
+                  }
+                  type="text"
+                  placeholder=""
+                  id="info"
+                  name="info"
+                />
+              </div>
+              <div className="booking__input">
+                <label htmlFor="phone">Số điện thoại</label>
+                <input
+                  value={bookingTicket.phone}
+                  onChange={(e) =>
+                    setBookingTicket({
+                      ...bookingTicket,
+                      phone: e.target.value,
+                    })
+                  }
+                  type="tel"
+                  placeholder=""
+                  id="phone"
+                  name="phone"
+                />
+              </div>
+              <div className="booking__input">
+                <label htmlFor="datetime">Ngày giờ hẹn</label>
+                <input
+                  value={bookingTicket.datetime}
+                  onChange={(e) =>
+                    setBookingTicket({
+                      ...bookingTicket,
+                      datetime: e.target.value,
+                    })
+                  }
+                  type="datetime-local"
+                  placeholder=""
+                  id="datetime"
+                  name="datetime"
+                />
+              </div>
+              <div className="booking__input">
+                <label htmlFor="service">Tên dịch vụ</label>
+                <input
+                  value={bookingTicket.service}
+                  onChange={(e) =>
+                    setBookingTicket({
+                      ...bookingTicket,
+                      service: e.target.value,
+                    })
+                  }
+                  type="text"
+                  placeholder=""
+                  id="service"
+                  name="service"
+                />
+              </div>
+              <div className="booking__input">
+                <label htmlFor="dentist">Tên nha sĩ</label>
+                <input
+                  value={bookingTicket.dentist}
+                  onChange={(e) =>
+                    setBookingTicket({
+                      ...bookingTicket,
+                      dentist: e.target.value,
+                    })
+                  }
+                  type="text"
+                  placeholder=""
+                  id="dentist"
+                  name="dentist"
+                />
+              </div>
+              <div className="booking__input">
+                <label htmlFor="notes">Ghi chú (nếu có)</label>
+                <input
+                  value={bookingTicket.notes}
+                  onChange={(e) =>
+                    setBookingTicket({
+                      ...bookingTicket,
+                      notes: e.target.value,
+                    })
+                  }
+                  type="text"
+                  placeholder=""
+                  id="notes"
+                  name="notes"
+                />
+              </div>
+              <button className="booking__button" type="submit">
+                Đặt lịch hẹn
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
       {/* Reviews */}
 
       {/* Footer */}
-      <img src={lazyFooter} alt="Footer" className="Footer"/>
+      <Footer />
 
       {/* Emergency Call */}
       <div className="emergency-call">
