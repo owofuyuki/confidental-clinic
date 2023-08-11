@@ -2,5 +2,8 @@
 
 confidental - Đồng hành cùng nụ cười tự tin.
 
+## Ghi chú
+Chưa thực hiện Responsive...
+
 ## Thiết kế
 ![image](./design.png)
