@@ -1,10 +1,27 @@
+import React, { useState, useEffect } from "react";
+
 import logoNavbar from "../assets/icons/confidental-logo.svg";
 import angleDown from "../assets/icons/angle-down-solid.svg";
 import contactPhone from "../assets/icons/contact-phone-solid.svg";
 
 const NavigationBar = (props) => {
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsNavbarFixed(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="Navbar Navbar--transparent">
+    <div className={`Navbar Navbar--transparent ${isNavbarFixed ? "Navbar--fixed" : ""}`}>
       <div className="grid wide">
         <nav className="navbar__main">
           <div className="navbar__wrap">

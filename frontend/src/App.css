@@ -84,17 +84,29 @@
 }
 
 .emergency-call {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  bottom: 4rem;
+  left: 6rem;
   cursor: pointer;
 }
 
 .emergency-call__icon {
-  height: 1.6rem;
-  margin-right: 0.4rem;
+  height: 2rem;
+  margin-right: 0.8rem;
 }
 
 .emergency-call__text {
   margin-top: 0.2rem;
   color: #808285;
+  font-size: 1.2rem;
+}
+
+.emergency-call:hover .emergency-call__text {
+  font-weight: 700;
+  color: #e9282b;
 }
 
 /* ------------ End declaring GLOBAL attributes ------------ */
@@ -310,12 +322,16 @@
 }
 
 .login-signup-emergency-call {
-  position: absolute;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   left: 4rem;
   bottom: 3.2rem;
+}
+
+.login-signup-emergency-call > .emergency-call__icon {
+  height: 1.6rem;
+}
+
+.login-signup-emergency-call > .emergency-call__text {
+  font-size: 1rem;
 }
 
 /* ------------ End declaring LOGIN/SIGNUP PAGE attributes ------------ */
@@ -429,8 +445,9 @@
 }
 
 .navbar__page-scroll img {
-  width: 1.2rem;
-  margin-left: 0.4rem;
+  width: 1rem;
+  margin-left: 0.48rem;
+  margin-bottom: 0.06rem;
   transition: all 0.3s ease-out 0s;
 }
 
@@ -492,6 +509,83 @@
 
 /* ------------ Start declaring LANDING PAGE attributes ------------ */
 
+.header__main {
+  position: relative;
+  width: 100%;
+  background-image: url(../src/assets/imgs/landing-img-bg.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 12vh;
+}
+
+.header__content {
+  margin-top: 4vh;
+}
+
+.header__description {
+  margin: 2rem 0 3.2rem 4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.header__button {
+  margin-left: 4rem;
+  padding: 2rem 6rem;
+  text-align: center;
+  border: none;
+  border-radius: 8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--white-color);
+  background-color: var(--border-blue-color);
+}
+
+.header__button:hover {
+  cursor: pointer;
+  background-color: var(--orange-color);
+  transition: all 0.3s ease-out 0s;
+}
+
+.header__img {
+  width: 50vw;
+}
+
+.header__features {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style: none;
+}
+
+.header__feature-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3.2rem;
+}
+
+.header__feature-icon {
+  width: 8rem;
+  height: 8rem;
+  transform: translateX(-1.6rem);
+}
+
+.header__feature-text {
+
+}
+
+.header__feature-link {
+  display: flex;
+  justify-content: flex-start;
+  height: 1.2rem;
+  text-decoration: none;
+}
 
 /* ------------ End declaring LANDING PAGE attributes ------------ */
