@@ -7,3 +7,17 @@ Chưa thực hiện Responsive...
 
 ## Thiết kế
 ![image](./design.png)
+
+## Chạy kiểm thử
+### Phía Client (Front-end)
+Chạy hai dòng lệnh sau trong Terminal
+```terminal
+cd frontend
+npm start
+```
+
+### Phía Server (Back-end)
+Chạy hai dòng lệnh sau trong Terminal
+```terminal
+cd backend
+npm start
