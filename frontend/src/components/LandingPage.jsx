@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavigationBar from "./NavigationBar";
+import Introduction from "./Introduction";
 
 import headerSlogan from "../assets/imgs/landing-slogan.svg";
 import headerImg from "../assets/imgs/landing-header-img.svg";
@@ -8,9 +9,17 @@ import headerIcon2 from "../assets/icons/header-icon-solid-2.svg";
 import headerIcon3 from "../assets/icons/header-icon-solid-3.svg";
 import headerIcon4 from "../assets/icons/header-icon-solid-4.svg";
 import angleRight from "../assets/icons/angle-right-solid.svg";
+import bookingContent from "../assets/imgs/landing-maa-content.svg";
+import lazyFooter from "../assets/imgs/footer.svg";
 import emergencyCall from "../assets/icons/emergency-call.svg";
 
 const LandingPage = () => {
+  const [currentType, setCurrentType] = useState("intro"); //intro, gallery, news
+
+  const handleBooking = () => {
+
+  };
+
   return (
     <div className="LandingPage">
       {/* Header */}
@@ -27,7 +36,7 @@ const LandingPage = () => {
                 Hãy để các nha sĩ cùng những dịch vụ tốt nhất chăm sóc cho sức
                 khoẻ răng miệng của bạn
               </p>
-              <button className="header__button">Đặt lịch ngay</button>
+              <a href="#Booking" className="header__button">Đặt lịch ngay</a>
             </div>
             <img className="header__img" src={headerImg} alt="" />
           </div>
@@ -80,6 +89,83 @@ const LandingPage = () => {
         </div>
       </div>
 
+      {/* Introduction */}
+      <div className="Introduction">
+        <div className="section introduction__main">
+          <div className="grid wide introduction__wrap">
+            <Introduction currentType={currentType} />
+            <div className="introduction__sider">
+              <p className="introduction__description">
+                Mục tiêu dài hạn của <br />
+                chúng tôi là luôn đạt được những kết quả tốt nhất cho sức khỏe
+                răng miệng của bạn. Bên cạnh đó, chúng tôi cũng tập trung vào
+                việc cung cấp cho bạn dịch vụ khách hàng tốt nhất.
+              </p>
+              <p className="introduction__description">
+                Chúng tôi luôn cố gắng để phòng khám nha khoa này trở thành nơi
+                mà khách hàng tin tưởng nhất!
+              </p>
+              <ul className="introduction__selection">
+                <li
+                  onClick={() => {
+                    setCurrentType("intro");
+                  }}
+                  className={
+                    currentType === "intro"
+                      ? "introduction__selection-item introduction__selection-item--selected"
+                      : "introduction__selection-item"
+                  }
+                >
+                  Giới thiệu
+                </li>
+                <li
+                  onClick={() => {
+                    setCurrentType("gallery");
+                  }}
+                  className={
+                    currentType === "gallery"
+                      ? "introduction__selection-item introduction__selection-item--selected"
+                      : "introduction__selection-item"
+                  }
+                >
+                  Thư viện ảnh
+                </li>
+                <li
+                  onClick={() => {
+                    setCurrentType("news");
+                  }}
+                  className={
+                    currentType === "news"
+                      ? "introduction__selection-item introduction__selection-item--selected"
+                      : "introduction__selection-item"
+                  }
+                >
+                  Tin tức nha khoa
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Make an Appointment */}
+      <div className="Booking" id="Booking">
+        <div className="section booking__main">
+            <div className="grid wide booking__wrap">
+                <img src={bookingContent} alt="" className="booking__content"/>
+                <form className="make-an-appointment" onSubmit={handleBooking}>
+
+                </form>
+            </div>
+        </div>
+      </div>
+
+      {/* Reviews */}
+
+      {/* Footer */}
+      <img src={lazyFooter} alt="Footer" className="Footer"/>
+
+      {/* Emergency Call */}
       <div className="emergency-call">
         <img className="emergency-call__icon" src={emergencyCall} alt="" />
         <p className="emergency-call__text">Cứu hộ nha khoa 24/7</p>
