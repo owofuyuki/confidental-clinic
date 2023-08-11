@@ -3,7 +3,8 @@
 confidental - Đồng hành cùng nụ cười tự tin.
 
 ## Ghi chú
-Chưa thực hiện Responsive...
+- Chưa thực hiện Responsive...
+- Còn giao diện các trang phụ đang hoàn thiện...
 
 ## Thiết kế
 ![image](./design.png)
