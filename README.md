@@ -6,6 +6,12 @@ confidental - Đồng hành cùng nụ cười tự tin.
 - Chưa thực hiện Responsive...
 - Còn giao diện các trang phụ đang hoàn thiện...
 
+## Đường dẫn
+- Trang chủ: localhost:XXXX/
+- Trang Đăng ký: localhost:XXXX/signup
+- Trang Đăng nhập: localhost:XXXX/login
+- ...
+
 ## Thiết kế
 ![image](./design.png)
 
