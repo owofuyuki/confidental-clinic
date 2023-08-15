@@ -30,13 +30,13 @@ const NavigationBar = (props) => {
       <div className="grid wide">
         <nav className="navbar__main">
           <div className="navbar__wrap">
-            <a href="./LandingPage.js" className="navbar__logo">
+            <Link to="/home" className="navbar__logo">
               <img
                 className="navbar__logo-img"
                 src={logoNavbar}
                 alt="confidental Logo"
               />
-            </a>
+            </Link>
             <div className="navbar__menu">
               <ul className="navbar__menu-list">
                 <li
