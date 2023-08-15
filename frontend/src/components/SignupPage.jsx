@@ -16,7 +16,7 @@ const SignupPage = () => {
   });
 
   const showIllegal = () => {
-    console.log("Chỉ có bệnh nhân mới có thể đăng ký tài khoản mới!");
+    alert("Chỉ có bệnh nhân mới có thể đăng ký tài khoản mới!");
   };
 
   const navigate = useNavigate();

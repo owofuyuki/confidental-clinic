@@ -59,7 +59,7 @@ const NavigationBar = (props) => {
                 >
                   <Link to="/service" className="navbar__page-scroll">
                     Dịch vụ
-                    <img src={angleDown} alt="" />
+                    {/* <img src={angleDown} alt="" /> */}
                   </Link>
                 </li>
                 <li
