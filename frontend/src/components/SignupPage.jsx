@@ -108,7 +108,7 @@ const SignupPage = () => {
           </div>
           <p className="signup__text">
             Bạn đã có tài khoản?
-            <Link className="signup__link" to="/login">Đăng nhập</Link>
+            <Link className="signup__link" to="/">Đăng nhập</Link>
           </p>
           <button className="signup__button" type="submit">
             <img className="signup__button-img" src={arrowRight} alt="Signup" />
