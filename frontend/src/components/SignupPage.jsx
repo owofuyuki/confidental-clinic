@@ -25,7 +25,7 @@ const SignupPage = () => {
     axios.post("http://localhost:8033/signup", account)
          .then(res => {
           if (res.data.Status === "Success.") {
-            navigate("/login");
+            navigate("/");
           } else {
             alert("Error.");
           }
