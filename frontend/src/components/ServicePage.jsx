@@ -1,9 +1,17 @@
+import React, { useEffect } from "react";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 
 import emergencyCall from "../assets/icons/emergency-call.svg";
 
 const ServicePage = () => {
+  useEffect(() => {
+    document.title = "confidental - Danh sách dịch vụ";
+    return () => {
+      document.title = "confidental - Đồng hành cùng nụ cười tự tin";
+    };
+  }, []);
+
   return (
     <div className="ServicePage">
       {/* Navigation Bar */}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { SignupValidation } from "./Validation";
 import axios from "axios";
@@ -9,6 +9,13 @@ import arrowRight from "../assets/icons/arrow-right-solid.svg";
 import emergencyCall from "../assets/icons/emergency-call.svg";
 
 const SignupPage = () => {
+  useEffect(() => {
+    document.title = "confidental - Đăng ký";
+    return () => {
+      document.title = "confidental - Đồng hành cùng nụ cười tự tin";
+    };
+  }, []);
+
   const [accountSignup, setAccountSignup] = useState({
     info: "",
     phone: "",

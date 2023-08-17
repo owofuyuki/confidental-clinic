@@ -1,9 +1,17 @@
+import React, { useEffect } from "react";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 
 import emergencyCall from "../assets/icons/emergency-call.svg";
 
 const AdvisePage = () => {
+  useEffect(() => {
+    document.title = "confidental - Tư vấn trực tuyến";
+    return () => {
+      document.title = "confidental - Đồng hành cùng nụ cười tự tin";
+    };
+  }, []);
+  
   return (
     <div className="AdvisePage">
       {/* Navigation Bar */}

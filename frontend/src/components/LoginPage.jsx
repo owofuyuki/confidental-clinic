@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LoginValidation } from "./Validation";
 
@@ -8,6 +8,13 @@ import arrowRight from "../assets/icons/arrow-right-solid.svg";
 import emergencyCall from "../assets/icons/emergency-call.svg";
 
 const LoginPage = () => {
+  useEffect(() => {
+    document.title = "confidental - Đăng nhập";
+    return () => {
+      document.title = "confidental - Đồng hành cùng nụ cười tự tin";
+    };
+  }, []);
+
   const [user, setUser] = useState("patient");
   const [isPatient, setIsPatient] = useState(true);
   const [isDentist, setIsDentist] = useState(false);

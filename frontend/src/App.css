@@ -852,6 +852,61 @@ p.header__feature-text {
 
 /* ------------ End declaring SERVICE PAGE attributes ------------ */
 
+
+/* ------------ Start declaring DENTIST PAGE attributes ------------ */
+
+.dentist__main {
+  position: relative;
+  background-color: var(--lighter-blue-color);
+}
+
+.dentist__header {
+  width: 100vw;
+}
+
+.dentist__list {
+  padding: 2rem 0.2rem 4rem;
+}
+
+.dentist__list-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.4rem 0;
+}
+
+.dentist__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 1.6rem 1.2rem 3.2rem;
+  margin: 0 1.2rem;
+  background-color: var(--white-color);
+  border-radius: 0.8rem;
+  box-shadow: 0 4pt 8pt rgba(35, 31, 32, 0.12);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dentist__img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+.dentist__name {
+  margin: 2.4rem 0 1.2rem;
+  font-size: 1.6rem;
+}
+.dentist__expertise {
+  font-size: 1.2rem;
+}
+
+.dentist__list-item:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+/* ------------ End declaring DENTIST PAGE attributes ------------ */
+
 /* ------------ Start declaring FOOTER attributes ------------ */
 
 .Footer {
