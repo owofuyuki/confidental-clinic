@@ -20,7 +20,7 @@ const confidentalDatabase = mysql.createConnection({
 });
 
 app.post("/signup", (req, res) => {
-    const sql = "INSERT INTO Login (`info`,`phone`,`username`,`password`) ACCOUNT (?)";
+    const sql = "INSERT INTO Login (`info`,`phone`,`username`,`password`) VALUES (?)";
     bcrypt.hash(req.body.password.toString(), salt, (err, hash) => {
         if (err) return res.json({Error: "Error for hassing password"});
         const account = [
