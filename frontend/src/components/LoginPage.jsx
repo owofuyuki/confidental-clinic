@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { LoginValidation } from "./Validation";
 
 import logoHeading from "../assets/icons/confidental-logo.svg";
 import logoBackground from "../assets/icons/confidental-mono.svg";
@@ -11,12 +12,16 @@ const LoginPage = () => {
   const [isPatient, setIsPatient] = useState(true);
   const [isDentist, setIsDentist] = useState(false);
   const [isStaff, setIsStaff] = useState(false);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [accountLogin, setAccountLogin] = useState({
+    username: '',
+    password: '',
+  });
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(user);
+    setErrors(LoginValidation(accountLogin));
   };
 
   return (
@@ -87,24 +92,26 @@ const LoginPage = () => {
             <div className="login__input">
               <label htmlFor="username">Tên đăng nhập</label>
               <input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={accountLogin.username}
+                onChange={(e) => setAccountLogin({...accountLogin, username: e.target.value})}
                 type="text"
                 placeholder=""
                 id="username"
                 name="username"
               />
+              {errors.username && <span className="login__validation--error">{errors.username}</span>}
             </div>
             <div className="login__input">
               <label htmlFor="password">Mật khẩu</label>
               <input
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={accountLogin.password}
+                onChange={(e) => setAccountLogin({...accountLogin, password: e.target.value})}
                 type="password"
                 placeholder=""
                 id="password"
                 name="password"
               />
+              {errors.password && <span className="login__validation--error">{errors.password}</span>}
             </div>
             <p className="login__text">
               Bạn chưa có tài khoản?

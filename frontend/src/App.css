@@ -247,6 +247,7 @@
 
 .login__input,
 .signup__input {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -274,6 +275,16 @@
   font-size: 1.6rem;
   line-height: 1.8rem;
   font-weight: 300;
+}
+
+.login__validation--error,
+.signup__validation--error {
+  position: absolute;
+  right: 1.2rem;
+  bottom: -1.4rem;
+  color: #e00000;
+  font-size: 0.96rem;
+  font-style: italic;
 }
 
 .login__button,

@@ -16,11 +16,11 @@ const confidentalDatabase = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "signup",
+    database: "SIGNUP",
 });
 
 app.post("/signup", (req, res) => {
-    const sql = "INSERT INTO login (`info`,`phone`,`username`,`password`) ACCOUNT (?)";
+    const sql = "INSERT INTO Login (`info`,`phone`,`username`,`password`) ACCOUNT (?)";
     bcrypt.hash(req.body.password.toString(), salt, (err, hash) => {
         if (err) return res.json({Error: "Error for hassing password."});
         const account = [
@@ -36,6 +36,6 @@ app.post("/signup", (req, res) => {
     });
 });
 
-app.listen(8033, () => {
+app.listen(3306, () => {
     console.log("Running...");
 });
