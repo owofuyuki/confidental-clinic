@@ -56,7 +56,7 @@ const SignupValidation = (values) => {
   if (values.password === "") {
     errors.password = "Mật khẩu không được để trống";
   } else if (!passwordPattern.test(values.password)) {
-    errors.password = "Mật khẩu không phù hợp";
+    errors.password = "Mật khẩu phải chứa ít nhất 8 kí tự, trong đó bao gồm kí tự thường, kí tự in hoa và số";
   } else {
     errors.password = "";
   }

@@ -16,13 +16,13 @@ const confidentalDatabase = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "SIGNUP",
+    database: "patient_accounts",
 });
 
 app.post("/signup", (req, res) => {
     const sql = "INSERT INTO Login (`info`,`phone`,`username`,`password`) ACCOUNT (?)";
     bcrypt.hash(req.body.password.toString(), salt, (err, hash) => {
-        if (err) return res.json({Error: "Error for hassing password."});
+        if (err) return res.json({Error: "Error for hassing password"});
         const account = [
             req.body.info,
             req.body.phone,
@@ -30,12 +30,12 @@ app.post("/signup", (req, res) => {
             hash,
         ];
         confidentalDatabase.query(sql, [account], (err, result) => {
-            if (err) return res.json({Error: "Inserting data Error in server."});
-            return res.json({Status: "Success."});
+            if (err) return res.json({Error: "Inserting data... Error in server"});
+            return res.json({Status: "Success"});
         });
     });
 });
 
-app.listen(3306, () => {
+app.listen(7417, () => {
     console.log("Running...");
 });

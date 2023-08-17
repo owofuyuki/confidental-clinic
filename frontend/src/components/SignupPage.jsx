@@ -25,6 +25,17 @@ const SignupPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(SignupValidation(accountSignup));
+    // if (errors.info === "" && errors.phone === "" && errors.username === "" && errors.password === "") {
+    //   axios.post("http://localhost:7417/signup", accountSignup)
+    //        .then(res => {
+    //         if (res.data.Status === "Success") {
+    //           navigate("/");
+    //         } else {
+    //           alert("Error");
+    //         }
+    //        })
+    //        .then(err => console.log(err));
+    // }
   };
 
   return (
