@@ -865,7 +865,7 @@ p.header__feature-text {
 }
 
 .dentist__list {
-  padding: 2rem 0.2rem 4rem;
+  padding: 2rem 0.2rem 12rem;
 }
 
 .dentist__list-row {
@@ -903,6 +903,73 @@ p.header__feature-text {
 .dentist__list-item:hover {
   cursor: pointer;
   transform: scale(1.08);
+}
+
+.dentist__search {
+  position: absolute;
+  bottom: -6rem;
+  right: 0;
+  left: 0;
+  padding: 3.2rem;
+  width: 60vw;
+  background-color: var(--white-color);
+  border-radius: 0.8rem;
+  box-shadow: 0 4pt 8pt rgba(35, 31, 32, 0.12);
+}
+
+.dentist__search-title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.dentist__search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dentist__search-date {
+  padding: 1.56rem;
+  border: 1px solid #999999;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+}
+
+.dentist__select-form {
+  flex: 1;
+  margin: 0 1.6rem;
+  padding: 1.68rem;
+  border: 1px solid #999999;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-image: url(./assets/icons/angle-down-solid.svg);
+  background-position: right 1.68rem center;
+  background-size: 1.2rem 1.2rem;
+}
+
+.dentist__button {
+  padding: 1.66rem 3.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: var(--border-blue-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.dentist__button:hover {
+  cursor: pointer;
+  background-color: var(--orange-color);
+  transition: all 0.3s ease-out 0s;
+}
+
+.dentist__space {
+  height: 8rem;
+  width: 100vw;
+  background-color: #f1f2f2;
 }
 
 /* ------------ End declaring DENTIST PAGE attributes ------------ */

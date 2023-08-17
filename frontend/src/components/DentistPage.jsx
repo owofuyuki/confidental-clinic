@@ -21,6 +21,10 @@ const DentistPage = () => {
     };
   }, []);
 
+  const handleSearch = () => {
+
+  };
+
   return (
     <div className="DentistPage">
       {/* Navigation Bar */}
@@ -75,9 +79,30 @@ const DentistPage = () => {
             </div>
           </div>
         </div>
+        <div className="grid wide dentist__search">
+          <h2 className="dentist__search-title">Tìm kiếm nha sĩ</h2>
+          <form onSubmit={handleSearch} className="dentist__search-form">
+            <input
+              type="datetime-local"
+              className="dentist__search-date"
+              placeholder="Thời gian lịch khám"
+            />
+            <select className="dentist__select-form">
+              <option selected>
+                Chọn dịch vụ cần tìm
+              </option>
+              <option value="1">Nha khoa tổng quát</option>
+              <option value="2">Định hình răng miệng</option>
+              <option value="3">Làm trắng răng</option>
+              <option value="4">...</option>
+            </select>
+            <button type="submit" className="dentist__button">Tìm</button>
+          </form>
+        </div>
       </div>
 
       {/* Footer */}
+      <div className="dentist__space"></div>
       <Footer />
 
       {/* Emergency Call */}
