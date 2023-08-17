@@ -9,7 +9,12 @@ const AdvisePage = () => {
       {/* Navigation Bar */}
       <NavigationBar currentPage="advise" />
 
-      Advise Page
+      {/* Advise Page Content */}
+      <div className="section advise__main">
+        <div className="grid wide advise__wrap">
+
+        </div>
+      </div>
 
       {/* Footer */}
       <Footer />

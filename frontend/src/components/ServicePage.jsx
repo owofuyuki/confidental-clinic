@@ -9,7 +9,12 @@ const ServicePage = () => {
       {/* Navigation Bar */}
       <NavigationBar currentPage="service" />
 
-      Service Page
+      {/* Service Page Content */}
+      <div className="section service__main">
+        <div className="grid wide service__wrap">
+          
+        </div>
+      </div>
 
       {/* Footer */}
       <Footer />

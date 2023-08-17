@@ -9,9 +9,10 @@ const DentistPage = () => {
       {/* Navigation Bar */}
       <NavigationBar currentPage="dentist" />
 
+      {/* Dentist Page Content */}
       <div className="section dentist__main">
         <div className="grid wide dentist__wrap">
-          
+
         </div>
       </div>
 
