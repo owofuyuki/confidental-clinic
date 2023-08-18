@@ -47,13 +47,13 @@ const Introduction = (props) => {
 
     if (props.currentType === "gallery") return (
         <div className="introduction__content">
-        ...
+        ... Gallery ...
         </div>
     );
 
     if (props.currentType === "news") return (
         <div className="introduction__content">
-        ...
+        ... News ...
         </div>
     );
 };
